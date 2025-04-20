@@ -18,14 +18,21 @@ The ATP Challenger Tour serves as a key stepping stone for rising tennis players
 ## Notebooks
 All data exploration, cleaning, and preliminary analysis steps are documented in Jupyter notebooks for clarity and reproducibility.
 
-You can browse them in the notebooks/ directory.
+You can browse them in the colab_notebooks/ directory.
 These notebooks provide an interactive view of how the datasets were prepared, cleaned, and analyzed step by step.
 
-⚡ Tip: You can also open them directly in Google Colab for a quick interactive run in the cloud — no local setup required.
+ Tip: You can also open them directly in Google Colab for a quick interactive run in the cloud — no local setup required.
+ 
 ##  Next Steps
-- Join Challenger-level data with Grand Slam outcomes to generate binary labels.
-- Design and implement feature engineering to capture performance trends over time.
-- Train and evaluate classification models to predict long-term success.
+-Challenger Data Preparation: Clean and preprocess Challenger-level match data to make it suitable for modeling.
+
+-Feature Engineering: Design features that capture early-career performance trends over time (e.g. win rates, age, ranking progression).
+
+-Label Integration: Join Challenger data with Grand Slam results to assign binary labels indicating whether a player eventually reached a Grand Slam semi-final.
+
+-Model Development: Train and evaluate classification models to predict long-term success based on early indicators.
+
+
 
 ##  Tech Stack
 Python · Pandas · NumPy · Git
