@@ -15,12 +15,19 @@ The ATP Challenger Tour serves as a key stepping stone for rising tennis players
 - **Player Feature Construction**: Engineered features such as player age, match outcomes, and recent performance metrics.
 - **Grand Slam Results File**: Created a cleaned dataset of Grand Slam match results to identify players who reached the semi-finals — for use in future labeling and evaluation.
 
+## Notebooks
+All data exploration, cleaning, and preliminary analysis steps are documented in Jupyter notebooks for clarity and reproducibility.
+
+You can browse them in the notebooks/ directory.
+These notebooks provide an interactive view of how the datasets were prepared, cleaned, and analyzed step by step.
+
+⚡ Tip: You can also open them directly in Google Colab for a quick interactive run in the cloud — no local setup required.
 ##  Next Steps
 - Join Challenger-level data with Grand Slam outcomes to generate binary labels.
 - Design and implement feature engineering to capture performance trends over time.
 - Train and evaluate classification models to predict long-term success.
 
-## 🛠 Tech Stack
+##  Tech Stack
 Python · Pandas · NumPy · Git
 
 ---
