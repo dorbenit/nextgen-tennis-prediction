@@ -31,7 +31,6 @@ For each player:
 - Average serve statistics during wins and losses
 - First and second serve effectiveness
 - Break point save percentages
-- Surface-specific ace rate (hard, clay, grass)
 - Entry age into Challenger matches
 - Average opponent rank in wins and losses
 - Dominant hand and height (from ATP player file)
