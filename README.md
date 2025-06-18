@@ -54,15 +54,31 @@ This ensures that the model simulates real-world decision-making based on availa
   - XGBoost (best performance overall)
 
 ---
+## ✅ Model Validation
+
+To address class imbalance and avoid overfitting, we used:
+
+- Stratified train-test splits to preserve label distribution.
+- SMOTE applied **only within training folds** using `Pipeline`, to prevent data leakage.
+- GridSearchCV with 5-fold cross-validation for robust hyperparameter tuning.
+- Final evaluation on an untouched test set.
+
+Despite strong ROC AUC (~0.92), **F1-scores were more modest** due to real-world imbalance.  
+This highlights the complexity of predicting rare success (e.g., Grand Slam semi-finalists) and the importance of careful validation beyond accuracy alone.
 
 ## Key Insights
+-Features such as Avg Opponent Rank in Wins, Height, and 2nd Serve Performance in Losses showed the strongest association with long-term success (i.e., reaching a Grand Slam semi-final).
 
-- Features such as **Avg Opponent Rank in Wins**, **Height**, and **2nd Serve Performance in Losses** showed the strongest correlation with reaching a Grand Slam semi-final.
-- **XGBoost** yielded the best predictive performance with a **ROC AUC of 0.92**.
-- **Logistic Regression** offered solid results and interpretability, making it useful as a baseline.
-- **Random Forest** underperformed slightly compared to expectations — possibly due to **mild overfitting**.
+-XGBoost delivered the best performance in terms of ROC AUC (~0.92), indicating strong ability to rank players by potential.
 
-   We suspect that the model may be too flexible given the current dataset size and feature space. Future work will include regularization, more aggressive hyperparameter tuning, and potentially simpler tree-based ensembles.
+-However, F1 scores were notably lower and more variable, reflecting the real-world challenge of modeling such an imbalanced and high-variance outcome.
+
+-Logistic Regression provided interpretable results and served as a reliable baseline, though with lower overall predictive power.
+
+-Random Forest underperformed slightly, potentially due to overfitting on the limited training data — future work may involve stronger regularization or feature selection.
+
+-Overall, the validation process highlighted that accuracy alone is insufficient in imbalanced settings, and that precision–recall trade-offs must be carefully considered.
+
 
  _Note: Correlation does not imply causation. These features are statistically associated with higher future performance but should be investigated further before drawing definitive conclusions._
 
@@ -77,17 +93,17 @@ Each notebook includes inline comments and visualizations to support reproducibi
 
 ##  Next Steps
 
-- Add more players to improve generalization.
-- Evaluate model calibration and confidence thresholds.
-- Explore temporal validation to reflect real-time forecasting.
-- Visualize feature importance across models (e.g., Random Forest, XGBoost).
+-Enhance feature set: Engineer additional features such as momentum indicators, opponent surface preference, or Elo-based performance scores.
+
+-Test on recent data: Apply the trained model to real ATP Challenger results from 2024–2025 and evaluate predictions against actual outcomes.
+
+=Interpretability and trust: Visualize and compare feature importance across models (e.g., Random Forest vs. XGBoost) to identify actionable insights.
 
 ---
 
 ##  Tech Stack
-
-Python · pandas · NumPy · scikit-learn · imbalanced-learn · XGBoost · Google Colab · Git/GitHub
-
+Python · pandas · NumPy · scikit-learn · imbalanced-learn · XGBoost · Matplotlib · Seaborn
+Google Colab · Jupyter Notebooks · Git · GitHub
 ---
 
 ##  Disclaimer
