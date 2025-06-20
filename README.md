@@ -90,20 +90,26 @@ All steps — from cleaning to modeling — are documented in modular Jupyter no
 Each notebook includes inline comments and visualizations to support reproducibility.
 
 ---
+##  Real-World Validation – Mid-2025 Update
+To test the model’s relevance, we applied it to Challenger-level performance data of young players up to 2025. The model predicted the top 16 most promising players likely to reach a Grand Slam semi-final, based solely on their early-career statistics.
 
-##  Next Steps
+## 5 of the ATP’s top 9 players under 21 (2025) were predicted by the model.
+This provides a strong early signal that the model aligns with real-world talent emergence — and isn't just noise.
 
--Enhance feature set: Engineer additional features such as momentum indicators, opponent surface preference, or Elo-based performance scores.
+The full prediction ranking reflects a range of ages and profiles  from already-known names like Holger Rune and Giovanni Mpetshi Perricard to newer faces like Lorenzo Carboni and Martin Landaluce.
 
--Test on recent data: Apply the trained model to real ATP Challenger results from 2024–2025 and evaluate predictions against actual outcomes.
+ These results support the model’s capacity to detect talent early based on performance trends — before they make headlines.
+ ## The model results:
+![Chart](photos/Watchlist.png)
 
-=Interpretability and trust: Visualize and compare feature importance across models (e.g., Random Forest vs. XGBoost) to identify actionable insights.
+ ## So… Who Will Actually Make It?
+Only time will tell which of these players will convert potential into Grand Slam glory.
+But thanks to this model, we now have a data-driven shortlist of names worth watching as tennis’ next generation unfolds.
 
----
 
 ##  Tech Stack
 Python · pandas · NumPy · scikit-learn · imbalanced-learn · XGBoost · Matplotlib · Seaborn
-Google Colab · Jupyter Notebooks · Git · GitHub
+Google Colab  · Git · GitHub
 ---
 
 ##  Disclaimer
